@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>PM Quant</title>
+    </head>
+    <body>
+        <div>
+            <h1>Ideas</h1>
+            <a>This page is just to test the database model.</a>
+        </div>
+
+        <div>
+            <h2>Table 1</h2>
+            <p>Here is where I want the table to be.</p>
+            <table>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Author</th>
+                    <th>Score</th>
+                    <th>Created</th>
+                    <th>Modified</th>
+                    <th>Release</th>
+                    <th>Status</th>
+                </tr>
+                {% for item in all_idea_list %}
+                <tr> 
+                    <td>{{ item.title }}</td>
+                    <td>{{ item.description }}</td>
+                    <td>{{ item.author }}</td>
+                    <td>{{ item.score }}</td>
+                    <td>{{ item.created }}</td>
+                    <td>{{ item.modified }}</td>
+                    <td>{{ item.release }}</td>
+                    <td>{{ item.status }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </body>
+</html>
