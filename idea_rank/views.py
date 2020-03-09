@@ -10,5 +10,4 @@ def idea_list(request):
     return render(request, 'idea_rank/idea_list.html', context)
 #   return HttpResponse(template.render(context, request))
 
-def index(request):
-    return render(request,"idea_rank/base.html")
+
