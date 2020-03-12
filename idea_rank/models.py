@@ -6,7 +6,7 @@ class idea(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
     author = models.EmailField()
-    score = models.SmallIntegerField(default=1500)
+    elo_score = models.SmallIntegerField(default=1500)
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
     release = models.CharField(max_length=10, blank=True)

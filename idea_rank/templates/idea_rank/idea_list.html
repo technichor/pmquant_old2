@@ -10,11 +10,12 @@
                     <th scope="col">Title</th>
                     <th scope="col">Description</th>
                     <th scope="col">Author</th>
-                    <th scope="col">Score</th>
+                    <th scope="col">Elo Score</th>
                     <th scope="col">Created</th>
                     <th scope="col">Modified</th>
                     <th scope="col">Release</th>
                     <th scope="col">Status</th>
+                    <th scope="col">Link</th>
                 </tr>
             </thead>
             <tbody>
@@ -23,11 +24,12 @@
                     <td>{{ item.title }}</td>
                     <td>{{ item.description }}</td>
                     <td>{{ item.author }}</td>
-                    <td>{{ item.score }}</td>
+                    <td>{{ item.elo_score }}</td>
                     <td>{{ item.created }}</td>
                     <td>{{ item.modified }}</td>
                     <td>{{ item.release }}</td>
                     <td>{{ item.status }}</td>
+                    <td><a href="{% url 'idea_detail' item.id %}">More Detail</a></td>
                 </tr>
                 {% endfor %}
             </tbody>

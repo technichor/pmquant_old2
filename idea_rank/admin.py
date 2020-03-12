@@ -4,7 +4,7 @@ from .models import idea
 
 @admin.register(idea)
 class IdeaAdmin(admin.ModelAdmin):
-    list_display = ('id','title','description','author','score','created')
+    list_display = ('id','title','description','author','elo_score','created')
     list_filter = ('status','created','modified','release')
     search_fields = ('title', 'author', 'description')
     # raw_id_fields = ()
